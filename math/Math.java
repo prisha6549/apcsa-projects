@@ -32,7 +32,8 @@ class Math {
    
     //Create codes that will print the following:
     //Odd integers from 1 to 100, inclusive of both
-    System.out.println("Odd integers from 1 to 100:");
+    
+    System.out.println("\nOdd integers from 1 to 100:");
     for(int i=1; i<=100; i+=2) 
     {
       System.out.println(i);
@@ -46,22 +47,23 @@ class Math {
     }
 
     //All multiples of 3 from 1 to 100
-    System.out.println("All multiples of 3 from 1 to 100");
+    System.out.println("\nAll multiples of 3 from 1 to 100");
     for(int i=1; i<=100; i++) 
     {
       if (i % 3 == 0) {
         System.out.println(i);
       }
     }
-
+    
     //Starting at 1000, print on the same line (with a - [hypthen] between each) all of the numbers that end in 0 going down to 0
+    System.out.println("");
     System.out.println("All multiples of 10 from 1000 to 0");
 
     for(int i=1000; i>=0; i--)
     {
-      if (1 % 10 == 0);
-        System.out.print("-"+i);
+      if (i%10 == 0) {
+        System.out.print(i + "-"); 
+      }
     }
-  //finished!!
   }
 }
