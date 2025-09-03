@@ -62,5 +62,6 @@ class Math {
       if (1 % 10 == 0);
         System.out.print("-"+i);
     }
+  //finished!!
   }
 }
