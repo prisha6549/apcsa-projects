@@ -17,6 +17,7 @@ public class Roomba implements Directions {
 
 	// declared here so it is visible in all the methods!
 	private Robot roomba;
+    
 
 	// You will need to add many variables!!
 
@@ -28,6 +29,7 @@ public class Roomba implements Directions {
 
 		World.readWorld(worldName);
 		World.setVisible(true);
+
 
 
 		/** This section will have all the logic that takes the Robot to every location
