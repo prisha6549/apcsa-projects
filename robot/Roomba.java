@@ -46,4 +46,10 @@ public class Roomba implements Directions {
         // This method should return the total number of beepers cleaned up.
 		return totalBeepers;
 	}
+		Roomba cleaner = new Roomba();
+		while(nextToBeeper);
+		{
+			roomba.PickUpBeeper();
+		}
+	}
 }
