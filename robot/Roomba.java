@@ -46,10 +46,45 @@ public class Roomba implements Directions {
         // This method should return the total number of beepers cleaned up.
 		return totalBeepers;
 	}
-		Roomba cleaner = new Roomba();
-		while(nextToBeeper);
+		Roomba cleaner = new Roomba();{
+		
+		while(roomba.nextToABeeper);
 		{
-			roomba.PickUpBeeper();
+			totalBeepersPicked++;
+			roomba.pickBeeper();
 		}
-	}
+		roomba.move();
+		totalSquaresMoved++;
+		
+		while (roomba.frontIsClear());
+		{
+			roomba.move();
+		}
+		
+		boolean moreToClean = true
+		while (moreToClean);
+		{
+			// Go forward until there is wall
+			while (roomba.frontIsClear())
+			{
+				roomba.move();
+			}
+			// If facing east : make left hand u-turn
+			// else : make right hand u-turn
+
+			if(roomba.facingEast())
+			{
+				roomba.turnLeft();
+				roomba.move();
+				roomba.turnLeft();
+			}
+			else(roomba.facingWequals())
+			{
+				roomba.turnRight();
+				roomba.move();
+				roomba.turnRight();
+			}
+		
+		}
+		
 }
