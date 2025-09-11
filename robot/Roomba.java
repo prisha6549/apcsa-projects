@@ -7,10 +7,11 @@ public class Roomba implements Directions {
 	// Main method to make this self-contained
 	public static void main(String[] args) {
 		// LEAVE THIS ALONE!!!!!!
-		String worldName = "robot/basicRoom.wld";
+		//String worldName = "robot/basicRoom.wld";
+		String worldName = "robot/testWorld1.wld";
 
 		Roomba cleaner = new Roomba();
-		int totalBeepers = cleaner.cleanRoom(worldName, 7, 6);
+		int totalBeepers = cleaner.cleanRoom(worldName, 25, 11);
 		System.out.println("Roomba cleaned up a total of " + totalBeepers + " beepers.");
 
 	}
@@ -48,7 +49,7 @@ public class Roomba implements Directions {
 	}
 		Roomba cleaner = new Roomba();{
 		
-		while(roomba.nextToABeeper);
+		while(roomba.nextToABeeper());
 		{
 			totalBeepersPicked++;
 			roomba.pickBeeper();
@@ -61,30 +62,43 @@ public class Roomba implements Directions {
 			roomba.move();
 		}
 		
-		boolean moreToClean = true
+		boolean moreToClean = true;
 		while (moreToClean);
 		{
 			// Go forward until there is wall
 			while (roomba.frontIsClear())
 			{
+				while(roomba.moreBeepers())
+				{
+					roomba.pickBeeper();
+				}
 				roomba.move();
+			if(roomba.facingEast())
+			{
+				roomba.uTurnFacingWest();
 			}
-			// If facing east : make left hand u-turn
-			// else : make right hand u-turn
-
+			else
+			{
+				roomba.uTurnFacingEast();
+			}
+			}
+			
 			if(roomba.facingEast())
 			{
 				roomba.turnLeft();
 				roomba.move();
 				roomba.turnLeft();
 			}
-			else(roomba.facingWequals())
+			else(roomba.facingWest())
 			{
 				roomba.turnRight();
 				roomba.move();
 				roomba.turnRight();
-			}
-		
+			}			
 		}
+		int largestPileSize = 0;
+		int largestPileLocationX = 0;
+		int largestPileLocationY = 0;
 		
-}
+
+	}
