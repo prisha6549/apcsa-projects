@@ -38,15 +38,15 @@ public class RoombA implements Directions {
 		// the line below causes a null pointer exception
 		// what is that and why are we getting it?
 		roomba.move();
-		boolean keep_driving_lovely_garbage_bot = true;
+		boolean roomba_move_forward = true;
 		
-		while (keep_driving_lovely_garbage_bot) {
-			boolean i_am_next_to_beeper = roomba.nextToABeeper();
+		while (roomba_move_forward) {
+			boolean roomba_next_to_beeper = roomba.nextToABeeper();
 			if (roomba.frontIsClear()) {
-				if (i_am_next_to_beeper) {
+				if (roomba_next_to_beeper) {
 					roomba.pickBeeper();
 				}
-			} else if (i_am_next_to_beeper){
+			} else if (roomba_next_to_beeper){
 				roomba.pickBeeper();
 				roomba.move();
 			} else {
@@ -83,7 +83,6 @@ public class RoombA implements Directions {
         // This method should return the total number of beepers cleaned up.
 		return totalBeepers;
 		
-		roomba.move();
 
 	}
 }
