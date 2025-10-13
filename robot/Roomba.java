@@ -42,13 +42,17 @@ public class Roomba implements Directions {
 
 		int totalBeepers = 0; // Need to move this somewhere else.
         // This method should return the total number of beepers cleaned up.
-		return totalBeepers;
-	}
+		int totalSquaresMoved = 0;
+		int largestPileSize = 0;
+		int largestPileLocationX = 0;
+		int largestPileLocationY = 0;
+		
+		
 		Roomba cleaner = new Roomba();{
 		
 		while(roomba.nextToABeeper());
 		{
-			totalBeepersPicked++;
+			totalBeepers++; 
 			roomba.pickBeeper();
 		}
 		roomba.move();
@@ -96,7 +100,8 @@ public class Roomba implements Directions {
 		int largestPileSize = 0;
 		int largestPileLocationX = 0;
 		int largestPileLocationY = 0;
-
+		
+		return totalBeepers;
 
 	}
 }
